@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Support — Reel Roulette</title>
+  <meta name="description" content="Support page for Reel Roulette." />
+  <style>
+    :root{
+      --bg:#0b0c10; --card:rgba(255,255,255,.06); --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.68); --border:rgba(255,255,255,.14);
+      --shadow:0 20px 60px rgba(0,0,0,.35); --radius:18px; --max:980px;
+      --link: rgba(120,180,255,.95);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb; --card:#fff; --text:rgba(15,18,25,.92);
+        --muted:rgba(15,18,25,.68); --border:rgba(15,18,25,.12);
+        --shadow:0 20px 60px rgba(20,30,60,.10);
+        --link:#0b62ff;
+      }
+    }
+    *{ box-sizing:border-box; }
+    html, body { height:100%; }
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(120,180,255,.20), transparent 55%),
+        radial-gradient(circle at 80% 10%, rgba(255,120,190,.14), transparent 55%),
+        var(--bg);
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      padding:28px 16px 42px;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max);
+      margin:0 auto;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .top{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:18px;
+      border:1px solid var(--border);
+      background:var(--card);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+      backdrop-filter: blur(10px);
+    }
+    .icon{
+      width:64px;height:64px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      overflow:hidden;
+      background:rgba(255,255,255,.12);
+      flex:0 0 auto;
+    }
+    .icon img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+    h1{ margin:0 0 4px; font-size:20px; letter-spacing:.2px; }
+    .sub{ margin:0; color:var(--muted); font-size:14px; }
+
+    .grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .card{
+      padding:18px;
+      border:1px solid var(--border);
+      background:var(--card);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+      backdrop-filter: blur(10px);
+    }
+    h2{ margin:0 0 10px; font-size:16px; letter-spacing:.2px; }
+    p{ margin:0 0 10px; }
+    ul{ margin:10px 0 0 18px; padding:0; color:var(--muted); }
+    li{ margin:8px 0; }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      font-size:14px;
+      width: fit-content;
+    }
+
+    .actions{ display:flex; flex-wrap:wrap; gap:10px; margin-left:auto; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      font-size:14px;
+      text-decoration:none;
+    }
+    .btn:hover{ text-decoration:none; transform: translateY(-1px); }
+    .btn.primary{
+      background: rgba(120,180,255,.20);
+      border-color: rgba(120,180,255,.35);
+    }
+
+    footer{
+      margin-top:auto;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      padding-top:10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <a class="pill" href="../" aria-label="Back to apps">← Back to Apps</a>
+
+  <header class="top">
+    <a href="#" aria-label="Open Reel Roulette on the App Store" style="display:flex;align-items:center;gap:14px;color:inherit;text-decoration:none;">
+      <div class="icon"><img src="icon.png" alt="Reel Roulette icon" /></div>
+      <div>
+        <h1 style="margin:0 0 4px;">Support — Reel Roulette</h1>
+        <p class="sub">Help, questions, and feedback • EN / IT</p>
+      </div>
+    </a>
+  
+    <div class="actions">
+      <a class="btn primary" href="APPSTORE_URL" target="_blank" rel="noopener">View on App Store</a>
+      <!-- Optional, only when your App Store page is live -->
+      <!-- <a class="btn" href="APPSTORE_REVIEW_URL" target="_blank" rel="noopener">Rate the app</a> -->
+    </div>
+  </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Support (English)</h2>
+        <p>Email: <a href="mailto:serj.tereshkin@gmail.com?subject=Reel%20Roulette%20Support">serj.tereshkin@gmail.com</a></p>
+        <p class="sub">To help me respond faster, include:</p>
+        <ul>
+          <li>Device model + iOS version</li>
+          <li>What you were doing</li>
+          <li>Screenshot / screen recording (if possible)</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Supporto (Italiano)</h2>
+        <p>Email: <a href="mailto:serj.tereshkin@gmail.com?subject=Supporto%20Reel%20Roulette">serj.tereshkin@gmail.com</a></p>
+        <p class="sub">Per rispondere più velocemente, indica:</p>
+        <ul>
+          <li>Modello dispositivo + versione iOS</li>
+          <li>Cosa stavi facendo</li>
+          <li>Screenshot / registrazione schermo (se possibile)</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Sergei Tereshkin
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Apps — johnshade-himself</title>
+  <meta name="description" content="App support pages and links." />
+  <style>
+    :root{
+      --bg:#0b0c10; --card:rgba(255,255,255,.06); --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.68); --border:rgba(255,255,255,.14);
+      --shadow:0 20px 60px rgba(0,0,0,.35); --radius:18px; --max:980px;
+      --link: rgba(120,180,255,.95);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb; --card:#fff; --text:rgba(15,18,25,.92);
+        --muted:rgba(15,18,25,.68); --border:rgba(15,18,25,.12);
+        --shadow:0 20px 60px rgba(20,30,60,.10);
+        --link:#0b62ff;
+      }
+    }
+
+    *{ box-sizing:border-box; }
+    html, body { height: 100%; }
+
+    body{
+      margin:0;
+      min-height: 100vh;
+      display:flex;               /* allows footer to stick to bottom */
+      font:16px/1.55 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+
+      /* FIX: gradients that do not repeat */
+      background:
+        radial-gradient(circle at 20% 0%, rgba(120,180,255,.20), transparent 55%),
+        radial-gradient(circle at 80% 10%, rgba(255,120,190,.14), transparent 55%),
+        var(--bg);
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* optional, looks nicer on desktop */
+      padding:28px 16px 42px;
+    }
+
+    a{ color: var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{
+      width: 100%;
+      max-width:var(--max);
+      margin:0 auto;
+      flex: 1;                    /* fills vertical space */
+      display:flex;
+      flex-direction:column;
+      gap: 18px;
+    }
+
+    header{
+      padding:18px;
+      border:1px solid var(--border);
+      background:var(--card);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+      backdrop-filter: blur(10px);
+    }
+    h1{ margin:0 0 6px; font-size:22px; letter-spacing:.2px; }
+    p{ margin:0; color:var(--muted); }
+
+    .grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .app{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:16px;
+      border:1px solid var(--border);
+      background:var(--card);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+      backdrop-filter: blur(10px);
+      transition: transform .12s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .app:hover{ transform: translateY(-2px); }
+
+    .icon{
+      width:64px; height:64px;
+      border-radius:16px;
+      border:1px solid var(--border);
+      overflow:hidden;
+      flex:0 0 auto;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.12);
+    }
+    .icon img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+    .meta{ min-width:0; }
+    .name{ margin:0; font-size:16px; letter-spacing:.2px; color: var(--text); }
+    .desc{ margin:4px 0 0; color:var(--muted); font-size:14px; }
+
+    footer{
+      margin-top:auto;           /* pushes footer to bottom */
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      padding-top:10px;
+    }
+    .small{ font-size:13px; color:var(--muted); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <h1>My Apps</h1>
+      <p>Support pages & useful links.</p>
+    </header>
+
+    <main class="grid" aria-label="Apps list">
+      <!-- App 1 -->
+      <a class="app" href="./reel-roulette/" aria-label="Open Reel Roulette support page">
+        <div class="icon">
+          <img src="./reel-roulette/icon.png" alt="Reel Roulette icon" />
+        </div>
+        <div class="meta">
+          <p class="name">Reel Roulette</p>
+          <p class="desc">Movie search, watchlists, and a movie wheel picker.</p>
+        </div>
+      </a>
+
+      <!-- App 2 -->
+      <a class="app" href="./encoding/" aria-label="Open Shady Encoding support page">
+        <div class="icon">
+          <img src="./encoding/icon.png" alt="Shady Encoding icon" />
+        </div>
+        <div class="meta">
+          <p class="name">Shady Encoding</p>
+          <p class="desc">Utility to encode/decode text with custom keys.</p>
+        </div>
+      </a>
+    </main>
+
+    <footer>
+      <div class="small">Contact: <a href="mailto:serj.tereshkin@gmail.com">serj.tereshkin@gmail.com</a></div>
+      <div class="small">© <span id="year"></span> Sergei Tereshkin</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
